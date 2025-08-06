@@ -1,0 +1,55 @@
+:root {
+  font-size: 62.5%;
+  font-family: system-ui, 'Roboto', Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --skella-white: #eeeeee;
+}
+
+body {
+  margin: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+
+/*
+
+Suggest media query break points
+
+Extra small (phones)
+@media (max-width: 480px) { ... }
+
+Small (phones to small tablets)
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+Medium (tablets to small laptops)
+@media (min-width: 769px) and (max-width: 1024px) { ... }
+
+Large (laptops/desktops)
+@media (min-width: 1025px) and (max-width: 1440px) { ... }
+
+Extra large (big desktops, ultrawide)
+@media (min-width: 1441px) { ... }
+
+*/
