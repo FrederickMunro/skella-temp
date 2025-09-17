@@ -49,7 +49,7 @@ const Header = () => {
         },
         {
           name: ['Aménagements', 'Landscaping',],
-          link: ['/amenagements', '/lansdcaping',],
+          link: ['/amenagements', '/amenagements',],
           options: null,
         },
         {
@@ -66,12 +66,12 @@ const Header = () => {
     },
     {
       name: ['Soumission', 'Quote',],
-      link: ['/soumission', '/quote',],
+      link: ['/soumission', '/soumission',],
       options: null,
     },
     {
       name: ['Galerie', 'Gallery',],
-      link: ['/galerie', '/gallery',],
+      link: ['/galerie', '/galerie',],
       options: null,
     },
     {
