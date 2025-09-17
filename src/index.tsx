@@ -16,6 +16,7 @@ import Aquarino from "./components/Aquarino";
 import Dolphin from "./components/Dolphin";
 import Landscaping from "./components/Landscaping";
 import Excavation from "./components/Excavation";
+import Blog from "./components/Blog";
 
 const router = createBrowserRouter([
   {
@@ -119,6 +120,7 @@ const router = createBrowserRouter([
         <ScrollToTop />
         <BackToTop />
         <Header />
+        <Blog />
         <Footer />
       </>
     )
