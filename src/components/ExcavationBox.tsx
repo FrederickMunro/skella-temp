@@ -10,7 +10,6 @@ interface Props {
 
 const ExcavationBox = ({ name, desc, icon }: Props) => {
   const [isClicked, setIsClicked] = useState<boolean>(false);
-  const { langNum } = useLanguage();
 
   const handleClicked = () => {
     setIsClicked(true);
