@@ -114,7 +114,7 @@
   padding-top: 2rem;
   top: 6rem;
   transition: width 0.3s ease;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--skella-white);
   overflow-y: scroll;
 }
@@ -138,7 +138,7 @@
 
 /* -------- Home -------- */
 .home-title-container {
-  background-image: url('/src/assets/home-image-600.webp');
+  background-image: url('/src/assets/home-image-1920.webp');
   background-size: cover;
   background-position: center;
   height: calc(100vh - 6rem);
@@ -194,7 +194,7 @@
 .home-pools {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url('/src/assets/home-piscines-600.webp');
+    url('/src/assets/home-pools-600.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -207,7 +207,7 @@
 .home-landscaping {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url('/src/assets/home-landscape-600.webp');
+    url('/src/assets/home-landscape-600.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -220,7 +220,7 @@
 .home-excavation {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url('/src/assets/home-image-600.webp');
+    url('/src/assets/home-excavation-600.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -244,7 +244,7 @@
 
 .home-video-button {
   text-decoration: none;
-  color: black;
+  color: var(--skella-medium-blue);
   background-color: white;
   margin-left: 5vw;
   font-size: 1.7rem;
@@ -278,6 +278,122 @@
 .home-first-text-text {
   margin: 0;
   font-size: 1.8rem;
+}
+
+.stats-section {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+  height: max(20rem, min(15vw, 40rem));
+  overflow: hidden;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('/src/assets/sel-de-mer-1.avif');
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  max-width: 25%;
+}
+
+.stat-number-container {
+  display: flex;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: max(3rem, min(2.5vw, 6rem));
+  margin: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.stat-symbol {
+  font-size: max(3rem, min(2.5vw, 6rem));
+  margin: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.stat-text {
+  font-size: max(1.5rem, min(1.25vw, 2.5rem));
+  margin: 0;
+  color: white;
+  letter-spacing: 0.1rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.review-container {
+  min-width: min(75%, 90rem);
+  max-width: min(75%, 90rem);
+  padding: max(2rem, min(1vw, 5rem)) max(4rem, min(2vw, 10rem));
+  margin: 0 auto;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: max(0.1rem, min(0.1vw, 1rem));
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.reviewer-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.reviews-title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: max(2rem, min(1vw, 4.5rem));
+  margin-right: 3px;
+  color: #fbc02d; /* Gold for stars */
+}
+
+.review-text {
+  font-size: max(1.6rem, min(2vw, 2rem));
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: max(2rem, min(3vw, 7rem));
+  padding: 1rem;
+  margin: max(2rem, min(5vw, 20rem)) 0 max(2rem, min(5vw, 20rem)) 0;
+}
+
+.review-date {
+  font-size: 1.4rem;
+  color: #555;
+  text-align: end;
+  margin: 1rem 3rem;
 }
 
 
@@ -317,6 +433,8 @@
   width: 1rem;
   transform: rotate(45deg);
 }
+
+
 
 
 /* ---------- Pools ---------- */
@@ -367,7 +485,8 @@
   height: 0.3rem; /* Thickness of the bar */
   background: #F4A460;
   cursor: ns-resize;
-  z-index: 2;
+  z-index: 1;
+  margin-top: -0.1rem;
 }
 
 .arrow {
@@ -385,7 +504,7 @@
 
 .arrow-down {
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -1.3rem;
 }
 
 .carousel-wrapper {
@@ -514,12 +633,424 @@
   background: none;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 6rem);
+  background-size: cover;
+  background-position: center;
+  padding: 0 1rem;
+}
 
+.pools-title {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('/src/assets/home-image-1920.webp');
+}
+
+.aquarino-title {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('/src/assets/home-image-1920.webp');
+}
+
+.landscaping-title {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('/src/assets/home-image-1920.webp');
+}
+
+
+.title-container-title {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.title-container-button {
+  text-decoration: none;
+  color: var(--skella-medium-blue);
+  background-color: white;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.pools-pool-container {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100vw;
+  background-color: var(--skella-light-blue);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.pools-pool-info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--skella-light-blue);
+}
+
+.pools-pool-nested-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--skella-dark-blue); */
+  background: linear-gradient(45deg, var(--skella-medium-blue) 20%, var(--skella-dark-blue) 100%);
+  width: min(97.5vw, 45rem);
+  height: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--skella-dark-blue);
+}
+
+.pools-pool-image {
+  width: min(97.5vw, 45rem);
+  height: min(65vw, 30rem);
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.pools-pool-model {
+  height: min(32vw, 15rem);
+  position: absolute;
+  align-self: flex-end;
+  margin-right: 2rem;
+}
+
+.pools-container-title {
+  font-size: max(2.5rem, min(9vw, 4rem));
+  margin: 5rem 5rem 2rem 5rem;
+  align-self: flex-start;
+  color: var(--skella-white);
+  letter-spacing: 0.1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pools-container-desc {
+  font-size: max(1.5rem, min(4.5vw, 2rem));
+  align-self: flex-start;
+  margin: 0 5rem 3rem 5rem;
+  color: var(--skella-white);
+  font-family: 'Roboto', sans-serif;
+  line-height: 2.2rem;
+}
+
+.pools-pool-detail-button {
+  margin: 0 0 2rem 0;
+  padding: 1rem max(0.5rem, min(3vw, 2rem));
+  border-radius: 1rem;
+  font-size: max(1rem, min(3.5vw, 1.5rem));
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: none;
+  background-color: var(--skella-white);
+  color: var(--skella-dark-blue);
+  font-family: 'Roboto', sans-serif;
+}
+
+.pools-pool-detail-button:hover {
+  transform: scale(1.05);
+}
+
+.depths-pool {
+  transition: max-height 1s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.depths-pool.open {
+  max-height: fit-content;
+}
+
+.depths-pool.close {
+  max-height: 0rem;
+}
+
+.sizedepth-titles-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sizedepth-titles {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.sizedepth-unit-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.sizedepth-unit-depth {
+  font-size: 1.8rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.sizedepth-unit-size-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sizedepth-unit-size {
+  font-size: 1.8rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.depths-container-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 4rem);
+  padding: 1rem 2rem;
+  margin: 1rem 0 0 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.depths-container-button {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.depths-container-arrow {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* ---- Landscaping ---- */
+.amenagement-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: var(--skella-light-green);
+}
+
+.amenagement-subtitle {
+  color: var(--skella-white);
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  margin: 0;
+  text-align: center;
+  width: 96vw;
+  padding: 3rem 2vw;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--skella-dark-green);
+}
+
+.amenagement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #C8E0C5, var(--skella-light-green));
+}
+
+.amenagement-seperator {
+  width: 100%;
+  height: 0.2rem;
+  align-self: center;
+  background-color: var(--skella-dark-green);
+}
+
+.amenagement-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 10%;
+  cursor: pointer;
+}
+
+.amenagement-icon {
+  padding-top: 1rem;
+  font-size: 6rem;
+  color: var(--skella-dark-green);
+}
+
+.amenagement-title {
+  font-size: max(2.2rem, min(2vw, 3.2rem));
+  font-weight: 900;
+  color: var(--skella-dark-green);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(2rem);
+}
+
+.amenagement-title.visible {
+  transform: translateY(-0.5rem);
+}
+
+.amenagement-desc {
+  margin: 0;
+  font-size: max(1.6rem, min(3vw, 2.2rem));
+  font-family: 'Roboto', sans-serif;
+  color: var(--skella-dark-green);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-1rem);
+  text-align: center;
+}
+
+.amenagement-desc.visible {
+  opacity: 1;
+  transform: translateY(0.5rem);
+}
+
+
+
+/* ---- Excavation ---- */
+.excavation-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #D7CCC8, white);
+}
+
+.excavation-container {
+  display: flex;
+  background-color: var(--skella-beige);
+}
+
+.excavation-icon {
+  padding-top: 1rem;
+  font-size: max(6rem, min(5vw, 9rem));
+  color: var(--skella-brown);
+}
+
+.excavation-title {
+  font-size: max(2.2rem, min(2vw, 3.2rem));
+  font-weight: 900;
+  color: var(--skella-brown);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(2rem);
+  text-align: center;
+}
+
+.excavation-title.visible {
+  transform: translateY(-0.5rem);
+}
+
+.excavation-subtitle {
+  color: var(--skella-white);
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 96vw;
+  padding: 3rem 2vw;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--skella-brown);
+}
+
+.excavation-seperator {
+  width: 100%;
+  height: 0.2rem;
+  align-self: center;
+  background-color: var(--skella-brown);
+}
+
+.excavation-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 10%;
+}
+
+.excavation-info-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.excavation-desc {
+  margin: 0;
+  font-size: max(1.6rem, min(3vw, 2.2rem));
+  font-family: 'Roboto', sans-serif;
+  color: var(--skella-brown);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-1rem);
+  text-align: center;
+}
+
+.excavation-desc.visible {
+  opacity: 1;
+  transform: translateY(0.5rem);
+}
+
+  @media only screen and (max-width: 1200px) {
+    .excavation-item {
+    }
+    
+    .excavation-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (min-width: 1201px) {
+    .excavation-item {
+      border-left: 0.2rem solid var(--skella-brown);
+    }
+    
+    .excavation-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 
 
 @media (min-width: 601px) {
   .home-title-container {
-    background-image: url('/src/assets/home-image-1200.webp');
+    background-image: url('/src/assets/home-image-1920.webp');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 6rem);
@@ -528,29 +1059,90 @@
   .home-pools {
     background-image: 
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-      url('/src/assets/home-piscines-1200.webp');
+      url('/src/assets/home-pools-1200.jpg');
     height: 20rem;
   }
   
   .home-landscaping {
     background-image: 
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-      url('/src/assets/home-landscape-1200.webp');
+      url('/src/assets/home-landscape-1200.jpg');
     height: 20rem;
   }
   
   .home-excavation {
     background-image: 
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-      url('/src/assets/home-image-1200.webp');
+      url('/src/assets/home-excavation-1200.jpg');
     height: 20rem;
   }
 }
 
-@media (min-width: 1201px) { 
+@media (min-width: 1201px) {
+  .home-title-container {
+    background-image: url('/src/assets/home-image-2560.webp');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 6rem);
+  }
 
+  .home-pools {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-pools-1920.jpg');
+    height: 20rem;
+  }
+  
+  .home-landscaping {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-landscape-1920.jpg');
+    height: 20rem;
+  }
+  
+  .home-excavation {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-excavation-1920.jpg');
+    height: 20rem;
+  }
+
+  .amenagement-item {
+    border-left: 0.2rem solid var(--skella-dark-green);
+  }
+  
+  .amenagement-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
-@media (min-width: 1921px) { 
+@media (min-width: 1921px) {
+  .home-title-container {
+    background-image: url('/src/assets/home-image-2560.webp');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 6rem);
+  }
 
+  .home-pools {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-pools-2560.jpg');
+    height: 20rem;
+  }
+  
+  .home-landscaping {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-landscape-2560.jpg');
+    height: 20rem;
+  }
+  
+  .home-excavation {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+      url('/src/assets/home-excavation-2560.jpg');
+    height: 20rem;
+  }
 }

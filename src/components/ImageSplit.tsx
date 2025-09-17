@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "./LanguageProvider";
 
 interface Props {
     color: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const ImageSplit = ({ color, dryImage, wetImage }: Props) => {
+  const { langNum } = useLanguage();
   const [dividerPosition, setDividerPosition] = useState<number>(50);
 
   const waterType = [
@@ -47,7 +49,7 @@ const ImageSplit = ({ color, dryImage, wetImage }: Props) => {
   return(
     <div className='color-container'>
       <h3 className='color-title'>{color}</h3>
-      <p className='color-water'>{waterType[0].dry[0]}</p>
+      <p className='color-water'>{waterType[0].dry[langNum]}</p>
       <div
         className="image-container"
         onMouseMove={handleMouseMove}
@@ -74,7 +76,7 @@ const ImageSplit = ({ color, dryImage, wetImage }: Props) => {
           <span className="arrow arrow-down">▼</span>
       </div>
       </div>
-      <p className='color-water'>{waterType[0].wet[0]}</p>
+      <p className='color-water'>{waterType[0].wet[langNum]}</p>
     </div>
   )
 }

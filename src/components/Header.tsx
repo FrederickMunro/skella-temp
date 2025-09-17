@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import HeaderImage from '../assets/header-logo.png';
 import MenuOption from './MenuOption';
 import { Link } from 'react-router-dom';
+import { useLanguage } from './LanguageProvider';
 
 const Header = () => {
-  const language = 0;
+  const { langNum, changeLangNum } = useLanguage();
   
   const [menuState, setMenuState] = useState('header-menu-closed');
   const handleMenuClick = () => {
@@ -80,7 +81,7 @@ const Header = () => {
     },
   ]
 
-  const handleHomeClick = () => {
+  const handleCloseMenu = () => {
     if (menuState === 'header-menu-open') {
       setMenuState('header-menu-closed');
     }
@@ -104,14 +105,14 @@ const Header = () => {
       <div className='header-image-container'>
         <Link
           to='/'
-          onClick={() => handleHomeClick()}
+          onClick={() => handleCloseMenu()}
         >
           <img className='header-image' src={HeaderImage} alt='Company header logo' />
         </Link>
       </div>
       <div className='header-menu-container large'>
         {menuOptions.map((e, i) => {
-          return <MenuOption name={e.name[language]} link={e.link[language]} options={e.options && e.options[language]} key={i} />
+          return <MenuOption name={e.name[langNum]} link={e.link[langNum]} options={e.options && e.options[langNum]} menuClose={() => handleCloseMenu()} key={i} />
         })}
       </div>
       
@@ -126,8 +127,9 @@ const Header = () => {
       <div className={`header-menu ${menuState}-slider main-color-background`}>
         <div className='header-menu-items'>
           {menuOptions.map((e, i) => {
-            return <MenuOption name={e.name[language]} link={e.link[language]} options={e.options && e.options[language]} key={i} />
+            return <MenuOption name={e.name[langNum]} link={e.link[langNum]} options={e.options && e.options[langNum]} menuClose={() => handleCloseMenu()} key={i} />
           })}
+          <p onClick={() => { changeLangNum(); handleMenuClick(); }}>{langNum ? 'FR' : 'EN'}</p>
         </div>
       </div>
     </div>

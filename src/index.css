@@ -5,6 +5,20 @@
   font-weight: 400;
 
   --skella-white: #eeeeee;
+  
+  --main-color: #eeeeee;
+  --secondary-color: black;
+  --skella-blue: blue;
+  --skella-grey: grey;
+  --skella-white: #eeeeee;
+  --skella-light-blue: #a8cbea;
+  --skella-medium-blue: #003366;
+  --skella-dark-blue: #00142d;
+  --skella-light-green: #E9F5E8;
+  --skella-green: green;
+  --skella-dark-green: #2E5E3E;
+  --skella-brown: #5D4037;
+  --skella-beige: #F5E9E2;
 }
 
 body {
@@ -35,6 +49,11 @@ html {
 
 a {
   text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 /*
