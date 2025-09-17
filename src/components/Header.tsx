@@ -19,7 +19,7 @@ const Header = () => {
   const menuOptions = [
     {
       name: ['Piscines', 'Pools',],
-      link: ['/piscines', '/pools',],
+      link: ['/piscines', '/piscines',],
       options: [
         {
           name: ['Collection Aquarino', 'Aquarino Collection',],

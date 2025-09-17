@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from './LanguageProvider';
 
 interface Props {
   title: string;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const BlogBox = ({ title, desc, story, image }: Props) => {
+  const { langNum } = useLanguage();
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -33,7 +35,7 @@ const BlogBox = ({ title, desc, story, image }: Props) => {
           </div>
 
           <button className="blog-post-toggle" onClick={toggleExpand}>
-            {isExpanded ? "Lire moins" : "Lire plus"}
+            {isExpanded ? langNum ? "Read less" : "Lire moins" : langNum ? "Read more" : "Lire plus"}
           </button>
         </div>
       </div>
