@@ -72,7 +72,7 @@ const Pools = () => {
       desc: ['Les plus grandes piscines en fibre de verre du marché.', 'The largest fiberglass pools on the market'],
     },
     {
-      title: ['Collection Fibco', 'Fibco Collection'],
+      title: ['Collection Mova', 'Mova Collection'],
       desc: ['Piscines isolées, durables et haut de gamme.', 'Durable and high-end insulated pools.'],
     },
   ]
@@ -118,7 +118,7 @@ const Pools = () => {
         </div>
       </Link>
       
-      <Link to='/piscines/fibco'>
+      <Link to='/piscines/mova'>
         <div className='home-pools'>
           <h3 className='home-section-title'>{sections[2].title[langNum]}</h3>
           <p className='home-section-text'>{sections[2].desc[langNum]}</p>

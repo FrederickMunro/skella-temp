@@ -47,6 +47,21 @@
   display: flex;
 }
 
+.menu-dropdown-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 3rem;
+  padding-top: 1rem;
+  max-height: 14.5rem;
+  overflow-y: hidden;
+  transition: max-height 0.3s;
+}
+
+.menu-dropdown-options.closed {
+  max-height: 0;
+}
+
 .menu-dropdown-arrow-container {
   margin-left: 1.5rem;
   width: 3.75rem;
@@ -1193,6 +1208,7 @@
 
 .finance-it-h {
   font-size: max(3rem, min(3.5vw, 5rem));
+  text-align: center;
   color: #333;
 }
 
@@ -1202,6 +1218,125 @@
   width: min(96%, 30rem);
 }
 
+
+/* ----- Experience ----- */
+.experience-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--skella-white);
+  padding: 10rem 0;
+}
+
+.experience-step-box-container-box {
+  max-height: min(70rem, max(50rem, 50vw));
+  min-height: min(70rem, max(50rem, 50vw));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.experience-step-box-container-box.last {
+  max-height: fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-step-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: 'Roboto', sans-serif;
+  padding: 3rem 0 3rem 0;
+  background-color: var(--skella-white);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  width: min(96vw, 100rem);
+  border-radius: 2rem;
+}
+
+.experience-box-step {
+  margin: 0 3rem 0 3rem;
+  font-size: max(1.6rem, min(2.5vw, 3rem));
+  color: var(--skella-dark-blue);
+  opacity: 0.8;
+  align-self: flex-start;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.experience-box-step-title {
+  margin: 2rem 3rem 2rem 3rem;
+  font-size: max(2.5rem, min(3vw, 3.5rem));
+  color: var(--skella-dark-blue);
+  align-self: flex-start;
+}
+
+.experience-box-step-desc {
+  font-size: max(1.6rem, min(2.5vw, 2.5rem));
+  align-self: flex-start;
+  margin: 0 3rem 3rem 3rem;
+  line-height: max(2rem, min(3vw, 3.5rem));
+}
+
+.experience-box-step-button {
+  text-decoration: none;
+  color: var(--skella-white);
+  background-color: var(--skella-medium-blue);
+  padding: 0.8rem 2rem;
+  margin: 0 3rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.experience-box-step-arrow {
+  width: 3rem;
+  height: 3rem;
+  border-bottom: 0.5rem solid var(--skella-dark-blue);
+  border-right: 0.5rem solid var(--skella-dark-blue);
+  transform: rotate(45deg);
+}
+
+.experience-box-step-arrow-container {
+  width: 5rem;
+  height: 5rem;
+  margin: 2rem 0;
+  padding-left: 1.1rem;
+}
+
+.experience-step-icon {
+  height: 8rem;
+  width: 8rem;
+  margin: auto;
+  color: var(--skella-medium-blue);
+  background-color: var(--skella-white);
+  padding: 2rem;
+}
+
+/* Timeline css */
+
+.timeline {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-section {
+  margin-top: 20rem;
+  height: min(70rem, max(50rem, 50vw));
+  width: 0.5rem;
+  background-color: lightgrey;
+  z-index: -2;
+}
 
 
 @media (min-width: 601px) {

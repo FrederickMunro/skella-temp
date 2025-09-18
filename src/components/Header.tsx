@@ -18,66 +18,78 @@ const Header = () => {
 
   const menuOptions = [
     {
-      name: ['Piscines', 'Pools',],
-      link: ['/piscines', '/piscines',],
+      name: ['Piscines', 'Pools'],
+      link: ['/piscines', '/piscines'],
       options: [
         {
           name: ['Collection Aquarino', 'Aquarino Collection',],
-          link: ['/aquarino', '/aquarino',],
+          link: ['/piscines/aquarino', '/piscines/aquarino'],
           options: null,
+          clickable: true,
         },
         {
           name: ['Collection Dolphin', 'Dolphin Collection',],
-          link: ['/dolphin', '/dolphin',],
+          link: ['/piscines/dolphin', '/piscines/dolphin'],
           options: null,
+          clickable: true,
         },
         {
           name: ['Collection Mova', 'Mova Collection',],
-          link: ['/mova', '/mova',],
+          link: ['/piscines/mova', '/piscines/mova'],
           options: null,
+          clickable: true,
         },
       ],
+      clickable: true,
     },
     {
-      name: ['Services', 'Services',],
-      link: ['/services', '/services',],
+      name: ['Services', 'Services'],
+      link: ['/services', '/services'],
       options: [
         {
-          name: ['L\'Expérience Skella', 'Skella Experience',],
-          link: ['/experience', '/experience',],
+          name: ['L\'Expérience Skella', 'Skella Experience'],
+          link: ['/experience-skella', '/experience-skella'],
           options: null,
+          clickable: true,
         },
         {
-          name: ['Aménagements', 'Landscaping',],
-          link: ['/amenagements', '/amenagements',],
+          name: ['Aménagements', 'Landscaping'],
+          link: ['/amenagements', '/amenagements'],
           options: null,
+          clickable: true,
         },
         {
-          name: ['Excavation', 'Excavation',],
-          link: ['/excavations', '/excavations',],
+          name: ['Excavation', 'Excavation'],
+          link: ['/excavations', '/excavations'],
           options: null,
+          clickable: true,
         },
       ],
+      clickable: false,
     },
     {
-      name: ['Promotions', 'Promotions',],
-      link: ['/promotions', '/promotions',],
+      name: ['Promotions', 'Promotions'],
+      link: ['/promotions', '/promotions'],
       options: null,
+      clickable: true,
     },
     {
-      name: ['Soumission', 'Quote',],
-      link: ['/soumission', '/soumission',],
+      name: ['Soumission', 'Quote'],
+      link: ['/soumission', '/soumission'],
       options: null,
+      clickable: true,
     },
     {
-      name: ['Galerie', 'Gallery',],
-      link: ['/galerie', '/galerie',],
+      name: ['Galerie', 'Gallery'],
+      link: ['/galerie', '/galerie'],
       options: null,
+      clickable: true,
     },
     {
-      name: ['Blog', 'Blog',],
-      link: ['/blog', '/blog',],
+      name: ['Blog', 'Blog'],
+      link: ['/blog', '/blog'],
       options: null,
+      clickable: true,
     },
   ]
 
@@ -111,9 +123,16 @@ const Header = () => {
         </Link>
       </div>
       <div className='header-menu-container large'>
-        {menuOptions.map((e, i) => {
-          return <MenuOption name={e.name[langNum]} link={e.link[langNum]} options={e.options && e.options[langNum]} menuClose={() => handleCloseMenu()} key={i} />
-        })}
+        {menuOptions.map((e, i) => (
+          <MenuOption
+            key={i}
+            name={e.name[langNum]}
+            link={e.link[langNum]}
+            options={e.options}
+            menuClose={handleCloseMenu}
+            clickable={e.clickable}
+          />
+        ))}
       </div>
       
       <div className={`header-hamburger-menu ${menuState}`} onClick={() => handleMenuClick()}>
@@ -126,9 +145,16 @@ const Header = () => {
       
       <div className={`header-menu ${menuState}-slider main-color-background`}>
         <div className='header-menu-items'>
-          {menuOptions.map((e, i) => {
-            return <MenuOption name={e.name[langNum]} link={e.link[langNum]} options={e.options && e.options[langNum]} menuClose={() => handleCloseMenu()} key={i} />
-          })}
+          {menuOptions.map((e, i) => (
+            <MenuOption
+              key={i}
+              name={e.name[langNum]}
+              link={e.link[langNum]}
+              options={e.options}
+              menuClose={handleCloseMenu}
+              clickable={e.clickable}
+            />
+          ))}
           <p onClick={() => { changeLangNum(); handleMenuClick(); }}>{langNum ? 'FR' : 'EN'}</p>
         </div>
       </div>

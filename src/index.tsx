@@ -18,6 +18,8 @@ import Landscaping from "./components/Landscaping";
 import Excavation from "./components/Excavation";
 import Blog from "./components/Blog";
 import Quote from "./components/Quote";
+import Mova from "./components/Mova";
+import Experience from "./components/Experience";
 
 const router = createBrowserRouter([
   {
@@ -69,12 +71,13 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: '/piscines/fibco',
+    path: '/piscines/mova',
     element: (
       <>
         <ScrollToTop />
         <BackToTop />
         <Header />
+        <Mova />
         <Footer />
       </>
     )
@@ -167,6 +170,7 @@ const router = createBrowserRouter([
         <ScrollToTop />
         <BackToTop />
         <Header />
+        <Experience />
         <Footer />
       </>
     )

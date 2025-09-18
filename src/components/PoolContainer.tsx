@@ -40,7 +40,7 @@ const PoolContainer = ({ title, desc, image, model, pdf, dimensions }: Props) =>
           {dimensions.map((dimension) => {
             return (
               <div className='sizedepth-unit-container'>
-                <p className='sizedepth-unit-depth'>{dimension[langNum]}</p>
+                <p className='sizedepth-unit-depth'>{dimension[0]}</p>
                 <div className='sizedepth-unit-size-container'>
                   {dimension[1].split(',').map((size) => {
                     return <p className='sizedepth-unit-size'>{size}</p>
